@@ -58,7 +58,7 @@ aplicacion.post('/post/:titulo/:contenido/', function (req, res) {
 });
 /*aplicacion.delete('/delete/:titulo/', function (req, res) {
 
-  listado.slice(0);
+  listado.rename(req.params.titulo,);
   res.send('La noticia ha sido eliminada satisfactoriamente');
   console.log('La noticia ha sido eliminada satisfactoriamente');
 });*/
