@@ -4,9 +4,9 @@ En la pagina index se mostrara un cuadro para insertar la noticia,y en la pagina
 una lista de todas las noticias, esta pagina es creada atomaticamente con la aplicacion
 GET/listado nos permite acceder al listado de noticias
 POST/listado Nos permite crear una nueva noticia
-GET/listado/identificador Nos permite acceder al detalle de la noticia
-PUT/listado/identificador Nos permite editar la notiica, sustituyendo la totalidad de la información anterior por la nueva.
-DELETE/listado/identificador Nos permite eliminar la noticia con el identificador 
+GET/listado/titulo Nos permite acceder al detalle de la noticia
+PUT/listado/titulo Nos permite editar la notiica, sustituyendo la totalidad de la información anterior por la nueva.
+DELETE/listado/titulo Nos permite eliminar la noticia con el identificador 
 */
 
 var express = require('express'); //Modulo express
