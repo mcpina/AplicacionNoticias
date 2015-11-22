@@ -5,7 +5,7 @@ una lista de todas las noticias, esta pagina es creada atomaticamente con la apl
 GET/listado nos permite acceder al listado de noticias
 POST/listado Nos permite crear una nueva noticia
 GET/listado/identificador Nos permite acceder al detalle de la noticia
-PUT/listado/identificador Nos permite editar la notiica, sustituyendo la totalidad de la información anterior por la nueva.
+PUT/listado/identificador Nos permite editar la notiica, sustituyendo la totalidad de la informaciÃ³n anterior por la nueva.
 DELETE/listado/identificador Nos permite eliminar la noticia con el identificador 
 */
 
@@ -21,7 +21,7 @@ var listado  = new Array; // array que almacenara todas las noticias
 
 //variable que almacena el codigo html que mostrara la pagina
 var string = '<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css"> body {background-color: #FFC;}</style></head><body align="center">';
-	//muestra pagina index, donde aparece recuadro para añadir noticia
+	//muestra pagina index, donde aparece recuadro para aÃ±adir noticia
 aplicacion.get('/', function (req, res) {
   console.log('Respuesta recibida'); //mensaje que aparece en la terminal
   res.send(index); // aparecera la pagina index.html en el navegador
@@ -56,12 +56,12 @@ aplicacion.post('/post/:titulo/:contenido/', function (req, res) {
   res.send('La noticia ha sido publicada satisfactoriamente');
   console.log('La noticia ha sido publicada satisfactoriamente');
 });
-aplicacion.delete('/delete/:titulo/', function (req, res) {
+/*aplicacion.delete('/delete/:titulo/', function (req, res) {
 
   listado.slice(0);
   res.send('La noticia ha sido eliminada satisfactoriamente');
   console.log('La noticia ha sido eliminada satisfactoriamente');
-});
+});*/
 
 aplicacion.listen(aplicacion.get('port'), function() {
   console.log("Servidor funcionando http:\\localhost:" + aplicacion.get('port'))
