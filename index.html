@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <title>Inserccion de Noticias</title>
+	<style type="text/css">
+	body,td,th {
+	color: #DF8E4D;
+	
+}
+  p { color: #CDB369; font-family: Verdana; }
+    body {
+	background-image: url();
+	background-color: #FFC;
+}
+</style>
+</head>
+   <body align="center">
+
+    <h1> Inserccion de Noticias </h1>
+    <p>Rellena el siguiente formulario para añadir la noticia</p>
+    
+    <form id="formulario">
+      Titulo:<br>
+      <input type="text" id="titulo">
+      <br>
+      Contenido:<br>
+      <input type="text" id="contenido">
+      <br>
+    </form>
+
+    <input type="submit" value="Añadir Noticia" id="enviar">
+    <p id='result'></p>
+    <a style="color:#8F4518" href="/listado"> Ver noticias. </a>
+    <script type='text/javascript'>
+
+    $(document).ready(function () {
+      //cuando pulsa boton añadir noticia
+      $('#enviar').click(function() {
+        $.post('/post/' + $("#titulo").val() + '/' + $("#contenido").val() + '/', function(data) {
+          $('#result').html(data);
+        });
+      });
+
+    });
+
+    </script>
+
+  </body>
+
+</html>
